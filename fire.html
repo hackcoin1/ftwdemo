@@ -1,14 +1,13 @@
-<!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
     <style media="screen">
       p > span { font-weight: bold; }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <section class="hero is-primary is-bold">
       <div class="hero-body">
         <div class="container">
@@ -55,11 +54,10 @@
 
       </div>
     </section>
-
-    <!-- If you don't want to use metamask you can use a local node and web3.js metamask will inject web3 for you so you don't need to do this: <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.min.js" charset="utf-8"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.0/bluebird.min.js" charset="utf-8"></script>
-    <!-- if your browser doesn't supports async/await you may want to use https://github.com/yortus/asyncawait -  -->
-    <script type="text/javascript">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.0/bluebird.min.js" charset="utf-8"></script>
+<script src="web3.min.js"></script>
+<script type="text/javascript">
+//var web3 = require("./web3.min.js");
 
       // PLEASE NOTE that the minimum Chrome version to run this code is 55 (async/await)
 
@@ -225,6 +223,6 @@
       // contract was compiled via:  https://ethereum.github.io/browser-solidity/
 
       // feel free to ask questions to @makevoid during Saturday about the JS code above and feel free to change it completely to however you'll like :)
-    </script>
-  </body>
+</script>
+</body>
 </html>
