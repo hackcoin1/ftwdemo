@@ -12,11 +12,8 @@
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            ERC20 Playground
+            ERC20 HACKERCOIN 
           </h1>
-          <h2 class="subtitle">
-            FTW 2017 Hackathon
-          </h2>
         </div>
       </div>
     </section>
@@ -92,7 +89,7 @@
           g.web3 = new Web3(web3.currentProvider)
         } else {
           // connect to your local geth or parity node instead
-          g.web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
+          g.web3 = new Web3(new Web3.providers.HttpProvider("https://rinkeby.infura.io/"))
         }
         g.eth = g.web3.eth
 

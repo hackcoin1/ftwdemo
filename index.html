@@ -66,6 +66,7 @@
       // Token contract code used for this example: https://gist.github.com/makevoid/ec7f9d94fdeb78d06cea48a17a117213
 
       // Any ERC20 Ethereum Standard Token will be compatible with this script.
+      localStorage.ftw_token_address = "0xff70f12aa0e054fbc0f48a64df4f3438c9c84146"
 
       var hackparticipants = {"accounts": {
         "MainAccount": {"name": "MainAccount", "address": "0x64269aBE35B08a1C9889257bf6A7998088064Bf2"},
@@ -186,7 +187,7 @@
 
         var transfer = Promise.promisify(g.tokenContract.transfer)
 
-        var tokenTransferAmount = 100 // FIXME" hardcoded amount, in a real app you probably want to specify the amount transfered
+        var tokenTransferAmount = 20 // FIXME" hardcoded amount, in a real app you probably want to specify the amount transfered
 
         var result = await transfer(recipient, tokenTransferAmount)
         c.log(result)
@@ -195,6 +196,12 @@
       var sendTokensFrom  = async function(from_address, to_address, amount) {
         var transferfrom = Promise.promisify(g.tokenContract.transferFrom)
         var result = await transferfrom(from_address, to_address, amount)
+        c.log(result)
+      }
+
+      var approveManager = async function(manager_address, up_to_amount) {
+        var approve = Promise.promisify(g.tokenContract.approve)
+        var result = await approve(manager_address, up_to_amount)
         c.log(result)
       }
 
@@ -225,6 +232,9 @@
       // contract was compiled via:  https://ethereum.github.io/browser-solidity/
 
       // feel free to ask questions to @makevoid during Saturday about the JS code above and feel free to change it completely to however you'll like :)
+
+      //Additional stuff
+      //approveManager(hackparticipants.accounts.MainAccount.address, 50)
     </script>
   </body>
 </html>
